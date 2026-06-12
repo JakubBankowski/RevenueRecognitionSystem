@@ -1,13 +1,14 @@
 
 using Microsoft.EntityFrameworkCore;
+using RevenueRecognitionSystem.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add DbContext with dependency injection
-/*
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-*/
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

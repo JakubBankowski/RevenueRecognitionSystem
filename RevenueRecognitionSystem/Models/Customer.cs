@@ -23,6 +23,7 @@ public abstract class Customer
     public string Phone { get; set; } = null!;
     
     public bool IsReturningClient { get; set; }
+    public bool IsDeleted { get; set; } = false;
     
     public ICollection<Contract> Contracts { get; set; } = new List<Contract>();
 }
@@ -41,8 +42,7 @@ public class Individual : Customer
     [MaxLength(11)]
     [MinLength(11)]
     public string Pesel { get; set; } = null!;
-
-    public bool IsDeleted { get; set; } = false;
+    
 }
 
 public class Company : Customer
