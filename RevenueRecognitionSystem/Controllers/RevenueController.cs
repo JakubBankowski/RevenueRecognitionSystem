@@ -28,6 +28,7 @@ public class RevenueController : ControllerBase
         return Ok(new{Revenue = total, Type = "Current Recognized Revenue"});
     }
 
+    [HttpGet("predicted")]
     public async Task<IActionResult> GetPredictedRevenue([FromQuery] int? productId)
     {
         DateTime now = DateTime.UtcNow;
