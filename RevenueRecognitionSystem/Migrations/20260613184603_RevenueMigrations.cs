@@ -158,7 +158,7 @@ namespace RevenueRecognitionSystem.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "PasswordHash", "Role", "Username" },
-                values: new object[] { 1, "AQAAAAIAAYagAAAAEG3hI9wMvK6PjFpX1vR8z0zK3qY8XzUq9PzL2vB3R==", "Admin", "admin" });
+                values: new object[] { 1, "AQAAAAIAAYagAAAAEAHs0S3qs6Y77j5fRU9X+akhT0z421ZyRiDfTrgekvo2hmcx9O7AgYEW/3jfulJatw==", "Admin", "admin" });
 
             migrationBuilder.InsertData(
                 table: "Contracts",

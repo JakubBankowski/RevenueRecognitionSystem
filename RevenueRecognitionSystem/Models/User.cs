@@ -10,14 +10,14 @@ public class User
     public int Id { get; set; }
 
     [Required]
-    [StringLength(100)]
+    [MaxLength(100)]
     public string Username { get; set; } = null!;
     
     [Required]
-    [StringLength(500)]
+    [MaxLength(500)]
     public string PasswordHash { get; set; } = null!;
     
     [Required]
-    [StringLength(50)]
+    [MaxLength(50)]
     public string Role { get; set; } = null!;
 }

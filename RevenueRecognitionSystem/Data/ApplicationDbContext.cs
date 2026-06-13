@@ -81,7 +81,7 @@ public class ApplicationDbContext : DbContext
             Id = 1,
             Username = "admin",
             Role = "Admin",
-            PasswordHash = "AQAAAAIAAYagAAAAEG3hI9wMvK6PjFpX1vR8z0zK3qY8XzUq9PzL2vB3R==",
+            PasswordHash = "AQAAAAIAAYagAAAAEAHs0S3qs6Y77j5fRU9X+akhT0z421ZyRiDfTrgekvo2hmcx9O7AgYEW/3jfulJatw==",
         };
         
         var users = new[]
