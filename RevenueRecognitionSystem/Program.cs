@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using RevenueRecognitionSystem.Services.Auth;
+using RevenueRecognitionSystem.Services.Contracts;
+using RevenueRecognitionSystem.Services.Customers;
+using RevenueRecognitionSystem.Services.Payments;
+using RevenueRecognitionSystem.Services.Revenue;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +54,12 @@ builder.Services.AddAuthentication(options =>
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
         };
     });
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IContractsService, ContractsService>();
+builder.Services.AddScoped<ICustomersService, CustomersService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IRevenueService, RevenueService>();
 
 var app = builder.Build();
 
