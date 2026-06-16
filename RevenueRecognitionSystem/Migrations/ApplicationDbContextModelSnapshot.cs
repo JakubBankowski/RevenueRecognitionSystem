@@ -71,7 +71,7 @@ namespace RevenueRecognitionSystem.Migrations
                             AdditionalSupportYears = 0,
                             CustomerId = 1,
                             EndDate = new DateTime(2026, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
-                            IsPaid = false,
+                            IsPaid = true,
                             SoftwareId = 1,
                             SoftwareVersion = "1.1",
                             StartDate = new DateTime(2025, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),

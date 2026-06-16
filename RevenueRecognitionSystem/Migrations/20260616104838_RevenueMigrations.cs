@@ -163,7 +163,7 @@ namespace RevenueRecognitionSystem.Migrations
             migrationBuilder.InsertData(
                 table: "Contracts",
                 columns: new[] { "Id", "AdditionalSupportYears", "CustomerId", "EndDate", "IsPaid", "SoftwareId", "SoftwareVersion", "StartDate", "TotalPrice" },
-                values: new object[] { 1, 0, 1, new DateTime(2026, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified), false, 1, "1.1", new DateTime(2025, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified), 123456m });
+                values: new object[] { 1, 0, 1, new DateTime(2026, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified), true, 1, "1.1", new DateTime(2025, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified), 123456m });
 
             migrationBuilder.InsertData(
                 table: "Payments",

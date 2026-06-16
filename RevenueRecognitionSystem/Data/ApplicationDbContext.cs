@@ -65,7 +65,7 @@ public class ApplicationDbContext : DbContext
             {
                 Id = 1, CustomerId = 1, SoftwareId = 1, SoftwareVersion = "1.1",
                 StartDate = new DateTime(2025, 6, 1, 7, 47, 0), EndDate = new DateTime(2026, 6, 1, 7, 47, 0),
-                TotalPrice = 123456, AdditionalSupportYears = 0
+                TotalPrice = 123456, AdditionalSupportYears = 0, IsPaid = true
             }
         };
         var payments = new[]

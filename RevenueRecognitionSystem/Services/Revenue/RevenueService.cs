@@ -14,20 +14,27 @@ public class RevenueService : IRevenueService
 
     public async Task<decimal> GetCurrentRevenueAsync(int? productId)
     {
-        var query = _context.Contracts.Where(c => c.IsPaid == true);
+        var query = _context.Contracts.Where(c => c.IsPaid);
 
-        if (productId.HasValue) query = query.Where(c => c.SoftwareId == productId.Value);
+        if (productId.HasValue)
+        {
+            query = query.Where(c => c.SoftwareId == productId.Value);
+        }
 
         return await query.SumAsync(c => c.TotalPrice);
     }
 
     public async Task<decimal> GetPredictedRevenueAsync(int? productId)
     {
-        DateTime now = DateTime.UtcNow;
+        var now = DateTime.UtcNow;
 
-        var query = _context.Contracts.Where(c => c.IsPaid == true || (c.IsPaid == false && now <= c.EndDate));
+        var query = _context.Contracts
+            .Where(c => c.IsPaid || (!c.IsPaid && now <= c.EndDate));
 
-        if (productId.HasValue) query = query.Where(c => c.SoftwareId == productId.Value);
+        if (productId.HasValue)
+        {
+            query = query.Where(c => c.SoftwareId == productId.Value);
+        }
 
         return await query.SumAsync(c => c.TotalPrice);
     }

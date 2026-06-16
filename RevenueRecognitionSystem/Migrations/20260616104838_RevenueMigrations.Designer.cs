@@ -12,7 +12,7 @@ using RevenueRecognitionSystem.Data;
 namespace RevenueRecognitionSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260613184603_RevenueMigrations")]
+    [Migration("20260616104838_RevenueMigrations")]
     partial class RevenueMigrations
     {
         /// <inheritdoc />
@@ -74,7 +74,7 @@ namespace RevenueRecognitionSystem.Migrations
                             AdditionalSupportYears = 0,
                             CustomerId = 1,
                             EndDate = new DateTime(2026, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
-                            IsPaid = false,
+                            IsPaid = true,
                             SoftwareId = 1,
                             SoftwareVersion = "1.1",
                             StartDate = new DateTime(2025, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
